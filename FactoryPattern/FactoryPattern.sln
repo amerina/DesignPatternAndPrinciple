@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern.csproj", "{1605D3FF-FFB8-4090-971D-D4A94727CB16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalPatterns", "CreationalPatterns", "{0DFEB212-3DAC-475B-80CE-284BE9FB75D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "StructuralPatterns", "{84CC74FD-C65B-4039-97DE-9B13E87F0F6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehavioralPatterns", "BehavioralPatterns", "{47E4C860-5F7E-4454-9452-D1CD20A8D54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1605D3FF-FFB8-4090-971D-D4A94727CB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1605D3FF-FFB8-4090-971D-D4A94727CB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1605D3FF-FFB8-4090-971D-D4A94727CB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1605D3FF-FFB8-4090-971D-D4A94727CB16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1605D3FF-FFB8-4090-971D-D4A94727CB16} = {0DFEB212-3DAC-475B-80CE-284BE9FB75D4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {867B92A2-F79D-4715-9CE7-51D4FB777A78}
+	EndGlobalSection
+EndGlobal
