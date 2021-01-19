@@ -1,2 +1,4 @@
 # DesignPatternAndPrinciple
 常见设计模式与设计原则
+
+计划使用C#实现常用的24种或者更多设计模式以及解释常见的设计原则
