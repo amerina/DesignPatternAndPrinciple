@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="SimpleFactory\" />
     <Folder Include="FactoryMethod\" />
     <Folder Include="AbstractFactory\" />
   </ItemGroup>
