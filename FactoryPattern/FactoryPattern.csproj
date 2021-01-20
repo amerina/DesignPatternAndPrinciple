@@ -5,9 +5,4 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="FactoryMethod\" />
-    <Folder Include="AbstractFactory\" />
-  </ItemGroup>
-
 </Project>

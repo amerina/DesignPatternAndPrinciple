@@ -1,4 +1,5 @@
-﻿using FactoryPattern.SimpleFactory;
+﻿using FactoryPattern.FactoryMethod;
+using FactoryPattern.SimpleFactory;
 using System;
 
 namespace FactoryPattern
@@ -30,7 +31,42 @@ namespace FactoryPattern
 
             #endregion
 
+            #region Factory Method
 
+            IFactory factory = new CircleFactory();
+            IShape shape = factory.Shape();
+            shape.Draw();
+
+            #endregion
+
+            #region AbstractFactory
+
+            //获取形状工厂
+            AbstractFactory shapeFactory1 = FactoryProducer.GetFactory("SHAPE");
+
+            //获取形状为 Circle 的对象
+            IShape shape4 = shapeFactory1.GetShape(ShapeTypeEnum.CIRCLE);
+
+            //调用 Circle 的 draw 方法
+            shape4.Draw();
+
+            //获取形状为 Rectangle 的对象
+            IShape shape5 = shapeFactory.GetShape(ShapeTypeEnum.RECTANGLE);
+
+            //调用 Rectangle 的 draw 方法
+            shape5.Draw();
+          
+
+            //获取颜色工厂
+            AbstractFactory colorFactory = FactoryProducer.GetFactory("COLOR");
+
+            //获取颜色为 Red 的对象
+            IColor color1 = colorFactory.GetColor(ColorTypeEnum.RED);
+
+            //调用 Red 的 fill 方法
+            color1.fill();
+
+            #endregion
         }
     }
 }
