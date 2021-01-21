@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace SingletonPattern
 {
+    /// <summary>
+    /// 大象装进冰箱需要三步:
+    /// 1、打开冰箱
+    /// 2、放入大象
+    /// 3、关上冰箱
+    /// </summary>
     public class SingletonElephantIntoFridge
     {
         /// <summary>

@@ -19,7 +19,8 @@
 1.需要频繁实例化然后销毁的对象。 
 2.创建对象时耗时过多或者耗资源过多，但又经常用到的对象。 
 3.有状态的工具类对象。 
-4.频繁访问数据库或文件的对象。 
+4.频繁访问数据库或文件的对象。
+
 
 
 单例模式的创建:
@@ -101,3 +102,11 @@ public class Singleton {
 
 
 延伸:What the difference between static class and singleton
+
+A singleton allows access to a single created instance - that instance (or rather, a reference to that instance) can be passed as a parameter to other methods, and treated as a normal object.
+A static class allows only static methods.
+
+参考:https://stackoverflow.com/questions/519520/difference-between-static-class-and-singleton-pattern
+     https://bytes.com/topic/c-sharp/answers/271199-diff-between-singleton-class-static-class
+	 https://dotnettutorials.net/lesson/singleton-vs-static-class/
+	 https://dotnettutorials.net/lesson/singleton-design-pattern-real-time-example/
