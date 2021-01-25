@@ -5,4 +5,8 @@
     <TargetFramework>net48</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryPattern\FactoryPattern.csproj" />
+  </ItemGroup>
+
 </Project>

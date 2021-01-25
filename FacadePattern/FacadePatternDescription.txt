@@ -1,1 +1,35 @@
 ﻿
+
+如何设计合理的接口粒度以兼顾接口的易用性和通用性？
+接口粒度设计得太大,太小都不好.太大会导致接口不可复用,太小会导致接口不易用。在实际的开发中,接口的可复用性和易用性需要“微妙”的权衡。
+针对这个问题,一个基本的处理原则是,尽量保持接口的可复用性,但针对特殊情况,允许提供冗余的门面接口,来提供更易用的接口
+
+
+
+
+定义
+Provide a unified interface to a set of interfaces in a subsystem. Facade Patterndefines a higher-level interface that makes the subsystem easier to use
+外观模式为子系统提供一组统一的接口,定义一组高层接口让子系统更易用
+
+1. 解决易用性问题
+门面模式可以用来封装系统的底层实现,隐藏系统的复杂性,提供一组更加简单易用、更高层的接口
+
+实际上,从隐藏实现复杂性,提供更易用接口这个意图来看,门面模式有点类似之前讲到的迪米特法则（最少知识原则）和接口隔离原则：两个有交互的系统,只暴露有限的必要的接口。除此之外,门面模式还有点类似之前提到封装、抽象的设计思想,提供更抽象的接口,封装底层实现细节
+
+2. 解决性能问题
+将多个接口调用替换为一个门面接口调用,减少网络通信成本,提高 App 客户端的响应速度
+
+3. 解决分布式事务问题
+
+
+
+Participants
+Facade   
+    knows which subsystem classes are responsible for a request.
+    delegates client requests to appropriate subsystem objects.
+
+Subsystem classes
+    implement subsystem functionality.
+    handle work assigned by the Facade object.
+    have no knowledge of the facade and keep no reference to it.
+
