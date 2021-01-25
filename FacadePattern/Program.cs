@@ -2,6 +2,9 @@
 
 namespace FacadePattern
 {
+    /// <summary>
+    /// 聚合接口
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
