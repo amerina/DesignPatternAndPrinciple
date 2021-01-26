@@ -10,6 +10,10 @@ namespace StrategyPattern
         private List<string> List = new List<string>();
         private ISortStrategy SortStrategy;
 
+        /// <summary>
+        /// 通过方法注入排序策略
+        /// </summary>
+        /// <param name="sortStrategy"></param>
         public void SetSortStrategy(ISortStrategy sortStrategy)
         {
             this.SortStrategy = sortStrategy;
