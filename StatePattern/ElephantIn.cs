@@ -15,8 +15,8 @@ namespace StatePattern
         }
         public void CloseFridgeDoor()
         {
-            Console.WriteLine("Elephant is in,you can close the fridge.");
-            StateMachine.SetFridgeState(FridgeState.FridgeDoorClose);
+            Console.WriteLine("Elephant is in,and the fridge is close.");
+            StateMachine.FridgeState = new FridgeDoorClose(StateMachine);
         }
 
         public void OpenFridgeDoor()

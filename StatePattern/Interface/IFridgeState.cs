@@ -12,5 +12,6 @@ namespace StatePattern.Interface
         void OpenFridgeDoor();
         void PutElephantIn();
         void CloseFridgeDoor();
+
     }
 }

@@ -21,8 +21,8 @@ namespace StatePattern
 
         public void OpenFridgeDoor()
         {
-            Console.WriteLine("Yes, now you can open fridge.");
-            StateMachine.SetFridgeState(FridgeState.FridgeDoorOpen);
+            Console.WriteLine("Now fridge is open.");
+            StateMachine.FridgeState = new FridgeDoorOpen(StateMachine);
         }
 
         public void PutElephantIn()

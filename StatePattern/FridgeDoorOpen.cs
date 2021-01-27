@@ -26,8 +26,8 @@ namespace StatePattern
 
         public void PutElephantIn()
         {
-            Console.WriteLine("Yes, you can put elephant in.");
-            StateMachine.SetFridgeState(FridgeState.ElephantIn);
+            Console.WriteLine("Now elephant in.");
+            StateMachine.FridgeState = new ElephantIn(StateMachine);
         }
     }
 }

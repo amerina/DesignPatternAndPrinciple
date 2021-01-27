@@ -8,11 +8,10 @@ namespace StatePattern
     public class FridgeStateMachine : IFridgeState
     {
         public IFridgeState FridgeState { get; set; }
-        public FridgeState CurrentFridgeState { get ;private set; }
 
-        public FridgeStateMachine(IFridgeState fridgeState)
+        public FridgeStateMachine()
         {
-            FridgeState = fridgeState;
+            FridgeState = new FridgeDoorClose(this);
         }
 
         public void OpenFridgeDoor()
@@ -28,16 +27,6 @@ namespace StatePattern
         public void CloseFridgeDoor()
         {
             FridgeState.CloseFridgeDoor();
-        }
-
-        public void SetFridgeState(FridgeState fridgeState)
-        {
-            CurrentFridgeState = fridgeState;
-        }
-
-        public FridgeState GetCurrentState()
-        {
-            return CurrentFridgeState;
         }
 
     }
