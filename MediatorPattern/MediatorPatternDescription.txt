@@ -1,1 +1,46 @@
 ﻿
+
+中介模式定义了一个单独的（中介）对象,来封装一组对象之间的交互。将这组对象之间的交互委派给与中介对象交互,来避免对象之间的直接交互。
+
+
+
+
+用一个中介对象来封装一系列的对象交互,中介者使各对象不需要显式地相互引用,从而使其耦合松散,而且可以独立地改变它们之间的交互。
+
+
+
+通过引入中介这个中间层,将一组对象之间的交互关系（或者说依赖关系）从多对多（网状关系）转换为一对多（星状关系）。
+原来一个对象要跟 n 个对象交互,现在只需要跟一个中介对象交互,从而最小化对象之间的交互关系,降低了代码的复杂度,提高了代码的可读性和可维护性
+
+Participants
+Mediator  
+	defines an interface for communicating with Colleague objects
+
+ConcreteMediator  
+	implements cooperative behavior by coordinating Colleague objects
+	knows and maintains its colleagues
+
+Colleague classes
+	each Colleague class knows its Mediator object
+	each colleague communicates with its mediator whenever it would have otherwise communicated with another colleague
+
+实战应用:
+在MVC框架中,当依赖注入的服务逐渐膨胀时我们可以通过引入中介者模式来简化构造函数参数的目的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
