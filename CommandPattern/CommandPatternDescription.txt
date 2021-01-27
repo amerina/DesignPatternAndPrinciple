@@ -1,1 +1,48 @@
 ﻿
+
+命令模式将请求（命令）封装为一个对象,这样可以使用不同的请求参数化其他对象（将不同请求依赖注入到其他对象）,并且能够支持请求（命令）的排队执行、记录日志、撤销等（附加控制）功能
+
+命令模式用到最核心的实现手段,就是将函数封装成对象
+
+命令模式的主要作用和应用场景,是用来控制命令的执行,比如,异步、延迟、排队执行命令、撤销重做命令、存储命令、给命令记录日志等等
+
+Participants
+Command
+	declares an interface for executing an operation
+
+ConcreteCommand
+	defines a binding between a Receiver object and an action
+	implements Execute by invoking the corresponding operation(s) on Receiver
+
+Client
+	creates a ConcreteCommand object and sets its receiver
+
+Invoker
+	asks the command to carry out the request
+
+Receiver
+	knows how to perform the operations associated with carrying out the request.
+
+
+
+每个设计模式都应该由两部分组成：第一部分是应用场景,即这个模式可以解决哪类问题；第二部分是解决方案,即这个模式的设计思路和具体的代码实现
+
+每种设计模式之间的区别主要在于应用场景
+
+
+策略模式包含策略的定义、创建和使用三部分,从代码结构上来,它非常像工厂模式。
+它们的区别在于,策略模式侧重“策略”或“算法”这个特定的应用场景,用来解决根据运行时状态从一组策略中选择不同策略的问题,而工厂模式侧重封装对象的创建过程,
+这里的对象没有任何业务场景的限定,可以是策略,但也可以是其他东西。
+
+
+命令模式跟策略模式的区别
+在策略模式中,不同的策略具有相同的目的、不同的实现、互相之间可以替换
+而在命令模式中,不同的命令具有不同的目的,对应不同的处理逻辑,并且互相之间不可替换
+
+
+
+
+
+
+
+
