@@ -1,1 +1,17 @@
 ﻿
+
+将请求的发送和接收解耦，让多个接收对象都有机会处理这个请求。将这些接收对象串成一条链，并沿着这条链传递这个请求，直到链上的某个接收对象能够处理它为止
+
+
+Participants
+Handler
+	defines an interface for handling the requests
+	(optional) implements the successor link
+
+ConcreteHandler
+	handles requests it is responsible for
+	can access its successor
+	if the ConcreteHandler can handle the request, it does so; otherwise it forwards the request to its successor
+
+Client
+	initiates the request to a ConcreteHandler object on the chain
