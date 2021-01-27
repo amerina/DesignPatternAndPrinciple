@@ -1,1 +1,28 @@
 ﻿
+
+解释器模式为某个语言定义它的语法（或者叫文法）表示,并定义一个解释器用来处理这个语法。
+
+
+
+如果一种特定类型的问题发生的频率足够高,那么可能就值得将该问题的各个实例表述为一个简单语言中的句子。这样就可以构建一个解释器,该解释器通过解释这些句子来解决该问题。
+
+Participants
+Context: 
+	This is a class that contains the data that we want to interpret.
+
+AbstractExpression: 
+	This is either an interface that defines the interpret method which should be implemented by the subclasses. 
+	This method takes the context object as a parameter. 
+	This context object holds the data that we want to interpret.
+
+TerminalExpression: 
+	This is a concrete class that implements the Interpret abstract method of the AbstractExpression interface. 
+	The Terminal Expression represents elements in the grammar that do not get replace such as symbols.
+
+NonTerminalExpression: 
+	This is also a concrete class that implements the AbstractExpression interface. 
+	The NonTerminalExpression represents elements that will be replaced during the evaluation such as variables or even rules.
+
+Client: 
+	This is a class that builds the abstract syntax tree for a set of instructions in the given grammar. 
+	This tree builds with the help of instances of NonTerminalExpression and TerminalExpression classes.
