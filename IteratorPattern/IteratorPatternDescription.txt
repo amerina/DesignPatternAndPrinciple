@@ -1,1 +1,37 @@
 ﻿
+迭代器模式用于顺序访问集合对象的元素,不需要知道集合对象的底层表示。
+
+
+一个完整的迭代器模式一般会涉及容器和容器迭代器两部分内容。为了达到基于接口而非实现编程的目的,容器又包含容器接口、容器实现类,迭代器又包含迭代器接口、迭代器实现类。
+Participants
+Iterator  
+	defines an interface for accessing and traversing elements.
+
+ConcreteIterator  
+	implements the Iterator interface.
+	keeps track of the current position in the traversal of the aggregate.
+
+Aggregate  
+	defines an interface for creating an Iterator object
+
+ConcreteAggregate  
+	implements the Iterator creation interface to return an instance of the proper ConcreteIterator
+
+
+遍历集合一般有三种方式：for 循环、foreach 循环、迭代器遍历。后两种本质上属于一种,都可以看作迭代器遍历。
+相对于 for 循环遍历,利用迭代器来遍历有下面三个优势：
+	• 迭代器模式封装集合内部的复杂数据结构,开发者不需要了解如何遍历,直接使用容器提供的迭代器即可;
+	• 迭代器模式将集合对象的遍历操作从集合类中拆分出来,放到迭代器类中,让两者的职责更加单一;
+	• 迭代器模式让添加新的遍历算法更加容易,更符合开闭原则。
+除此之外,因为迭代器都实现自相同的接口,在开发中,基于接口而非实现编程,替换迭代器也变得更加容易
+
+
+
+
+
+
+
+
+
+
+
