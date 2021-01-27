@@ -1,1 +1,12 @@
 ﻿
+备忘录模式，也叫快照（Snapshot）模式
+备忘录模式（Memento Pattern）保存一个对象的某个状态，以便在适当的时候恢复对象
+
+
+
+备忘录模式使用三个类 Memento、Originator 和 CareTaker
+Memento 包含了要被恢复的对象的状态
+
+Originator 创建并在 Memento 对象中存储状态
+
+Caretaker 对象负责从 Memento 中恢复对象的状态
