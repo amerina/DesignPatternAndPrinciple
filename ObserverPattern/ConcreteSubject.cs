@@ -20,6 +20,10 @@ namespace ObserverPattern
             });
         }
 
+        /// <summary>
+        /// 注册观察者
+        /// </summary>
+        /// <param name="observer"></param>
         public void RegisterObserver(IObserver observer)
         {
             Observers.Add(observer);
