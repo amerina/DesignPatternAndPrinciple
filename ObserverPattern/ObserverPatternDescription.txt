@@ -19,10 +19,11 @@
 关键代码：在ConcreteSubject里有一个列表存放观察者
 
 
-Participants
-Subject
+Participants参与者
+Subject主题
 	knows its observers. Any number of Observer objects may observe a subject
 	provides an interface for attaching and detaching Observer objects.	
+	知道它的观察员。任意数量的观察者对象都可以观察一个对象提供了一个连接和分离Observer对象的接口。
 
 ConcreteSubject
 	stores state of interest to ConcreteObserver
